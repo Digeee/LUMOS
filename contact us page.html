@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact-us.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="user interface.html" class="navbar-logo">Lumos</a>
+            <ul class="navbar-links">
+                <li><a href="user interface.html">Home</a></li>
+                <li><a href="categories page.html">Categories</a></li>
+                <li><a href="user interface.html#services">Services</a></li>
+                <li><a href="contact us page.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="background"></div>
+    
+    <!-- Flex container for video and form -->
+    <div class="content-wrapper">
+        <!-- Video Section -->
+        <video src="files/xyz.mp4" class="contact-video" autoplay loop muted></video>
+        
+        <!-- Contact Form Section -->
+        <div class="contact-container">
+            <!-- Company Logo -->
+            <img src="files/png copy.png" alt="Company Logo" class="logo">
+
+            <h1>Contact Us</h1>
+            <p>Have questions or feedback? We'd love to hear from you!</p>
+
+            <form id="contact-form" class="contact-form" action="contact_us_process.php" method="POST">
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <!-- Back to Home Button -->
+            <a href="user interface.html" class="back-home-button">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 LUMOS. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

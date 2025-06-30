@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #44444451;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Logo Styling */
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.company-logo {
+  width: 150px; /* Adjust the size as needed */
+  height: auto;
+}
+
+/* Heading and List Styles */
+h1 {
+  color: #333;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.total-price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #320064;
+  
+}
+.thank-you {
+  margin-top: 40px;
+  font-size: 20px;
+  color: #320064;
+}
+
+/* Redirect Button Styling */
+.redirect-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #2f0064;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.redirect-btn:hover {
+  background-color: #004d00;
+}
+
+/* Button with 3D Effect */
+span {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+span a {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  font-family: 'Montserrat', sans-serif;
+}
+span a:before,
+span a:after {
+  position: absolute;
+  content: "Back to Home";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #4C00EE;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+span a:before {
+  color: #fff;
+  background: #4C00EE;
+  transform: rotateY(0deg) translateZ(25px);
+}
+span a:after {
+  color: #4C00EE;
+  transform: rotateX(90deg) translateZ(25px);
+}
+span a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.2;
+}

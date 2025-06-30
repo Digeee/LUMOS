@@ -1,0 +1,195 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); /* Subtle gradient */
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Banner styles */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Slightly taller for a premium feel */
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%) blur(2px); /* Softer, glossy backdrop */
+    transition: transform 0.5s ease;
+}
+
+.banner:hover img {
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(0, 123, 255, 0.8), 2px 2px 10px rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Glassy effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation styles */
+nav {
+    background: linear-gradient(90deg, rgba(30, 30, 30, 0.95), rgba(40, 40, 40, 0.95));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px); /* Enhanced glassmorphism */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a:hover {
+    background: linear-gradient(45deg, #007BFF, #00c6ff); /* Glossy gradient */
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8), 0 0 25px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Main content styles */
+main {
+    padding: 30px;
+    background: rgba(18, 18, 18, 0.9);
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.item {
+    background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 123, 255, 0.3);
+}
+
+.item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: brightness(90%);
+    transition: filter 0.3s ease;
+}
+
+.item:hover img {
+    filter: brightness(110%);
+}
+
+.item button {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 0 0 15px 15px;
+    background: linear-gradient(90deg, #007BFF, #00c6ff);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.item button:hover {
+    background: linear-gradient(90deg, #0056b3, #0096c7);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(90deg, #1e1e1e, #252525);
+    color: #e0e0e0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading styles */
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.2em;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 15px 0;
+    }
+    .banner {
+        height: 250px;
+    }
+    .banner-text {
+        font-size: 1.8em;
+        padding: 10px 20px;
+    }
+    .image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}

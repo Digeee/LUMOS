@@ -1,0 +1,195 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #0d0d0d;
+    padding: 10px 20px;
+    border-bottom: 2px solid #00ffcc;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00ffcc;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+h2 {
+    color: #00ffcc;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+h3 {
+    color: #00ffcc;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Success Message Styling */
+.success {
+    color: #00ffcc;
+    background-color: rgba(0, 255, 204, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #00ffcc;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table thead {
+    background-color: #00ffcc;
+    color: #0d0d0d;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #00ffcc;
+}
+
+table tbody tr:hover {
+    background-color: rgba(0, 255, 204, 0.1);
+}
+
+/* Delete Button Styling */
+.delete-btn {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+    color: #ff1a1a;
+    text-shadow: 0 0 10px rgba(255, 77, 77, 0.7);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    border: 1px solid #00ffcc;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form select:focus {
+    outline: none;
+    border-color: #00ffcc;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+form button {
+    background-color: #00ffcc;
+    color: #0d0d0d;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00e6b8;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.7);
+}
+
+/* Logout Button Styling */
+.logout-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #ff1a1a;
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.7);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    border-top: 2px solid #00ffcc;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}

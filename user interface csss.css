@@ -1,0 +1,257 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Body Styling */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    background: url("files/sky.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    backdrop-filter: blur(3px); /* Blur effect */
+    z-index: -1;
+}
+  
+  /* Header Section */
+  header {
+    
+    
+    color: #02000555;
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+  }
+
+  #bgVideo {
+    position: absolute;
+    top: 53.5%;
+    left: 80%;
+    width: 550px;
+    height: 300px;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-80%, -50%);
+    object-fit:cover;
+    z-index: -2; /* Ensure video stays behind content */
+  }
+  
+  .logo {
+    width: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text Shadow */
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Text Shadow */
+  }
+  
+
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #2d2d4ea1;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 1 1rem;
+  }
+  
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text Shadow */
+  }
+  
+  nav ul li a:hover {
+    color: #5f1bff;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 2rem;
+  }
+  
+  /* Section Titles */
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Text Shadow */
+  }
+  
+  /* About Section */
+  .about-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .about-image {
+    width: 300px;
+    border-radius: 10px;
+    margin-right: 2rem;
+  }
+  
+  /* Services Section */
+/* Services Section - Adjust image sizes and alignment */
+/* Services Section */
+.service-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of cards if they don't fit in one row */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 1.5rem; /* Space between cards */
+  margin-top: 2rem;
+}
+
+.service-card {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  width: calc(25% - 1.5rem); /* Makes the card 25% wide minus the gap */
+  max-width: 300px; /* Ensures cards don't grow too wide */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  object-fit: cover; /* Ensures the image fits within the dimensions */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card {
+    width: calc(50% - 1.5rem); /* Two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    width: 100%; /* Single column layout on very small screens */
+  }
+}
+
+
+  
+  /* Testimonials Section */
+  #testimonials {
+    padding: 2rem 0;
+    background-color: #31315421;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .testimonial {
+    margin: 1rem 0;
+    padding: 6rem;
+  }
+  
+  .client-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+ 
+  #footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.footer-grid h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-items {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-items:hover {
+    color: #fff;
+}
+
+.social-icon {
+  width: 32px; 
+  height: 32px;
+  margin-right: 8px; 
+  transition: transform 0.3s; 
+}
+
+.footer-items:hover .social-icon {
+  transform: scale(1.1);
+  filter: invert(50%);
+}
+
+
+.footer-items {
+  text-decoration: none;
+}
+
+
+
+
+.copyrights {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+
+

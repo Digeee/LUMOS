@@ -1,0 +1,95 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout css.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Company Logo -->
+    <div class="logo-container">
+      <img src="files/png.png" alt="Company Logo" class="company-logo">
+    </div>
+    <h1>Thank You for Choosing Us!</h1>
+    <h2>Your Cart</h2>
+    <ul id="cart-details"></ul>
+    <p class="total-price" id="total-price"></p>
+    <p class="thank-you">We appreciate your trust in our services. Have a great day!</p>
+
+    <form id="checkout-form" method="POST" action="process_purchase.php">
+      <!-- Hidden inputs to store product data -->
+      <div id="hidden-fields"></div>
+      <button type="submit" id="confirm-purchase">Confirm Purchase</button>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Retrieve data from localStorage
+      const cartDetails = JSON.parse(localStorage.getItem("cartDetails")) || [];
+      const totalPrice = localStorage.getItem("totalPrice") || 0;
+      const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+
+      const cartDetailsList = document.getElementById("cart-details");
+      const totalPriceElement = document.getElementById("total-price");
+      const hiddenFields = document.getElementById("hidden-fields");
+      const checkoutForm = document.getElementById("checkout-form");
+
+      // Clear the list first
+      cartDetailsList.innerHTML = "";
+      hiddenFields.innerHTML = "";
+
+      if (selectedProduct) {
+        // User clicked "Order Now" on a single product
+        cartDetailsList.innerHTML = `<li>${selectedProduct.title} - $${selectedProduct.price}</li>`;
+        totalPriceElement.textContent = `Total: $${selectedProduct.price}`;
+
+        // Add hidden fields for submission
+        hiddenFields.innerHTML = `
+          <input type="hidden" name="product_name[]" value="${selectedProduct.title}">
+          <input type="hidden" name="price[]" value="${selectedProduct.price}">
+        `;
+
+        // Automatically submit after 2 seconds
+        setTimeout(() => {
+          checkoutForm.submit();
+        }, 2000);
+
+        // Clear localStorage
+        localStorage.removeItem("selectedProduct");
+
+      } else if (cartDetails.length > 0) {
+        // User checked out with multiple products
+        cartDetails.forEach(item => {
+          // Display items in cart
+          const li = document.createElement("li");
+          li.textContent = `${item.title} - $${item.price}`;
+          cartDetailsList.appendChild(li);
+
+          // Create hidden inputs for submission
+          const inputName = document.createElement("input");
+          inputName.type = "hidden";
+          inputName.name = "product_name[]";
+          inputName.value = item.title;
+          hiddenFields.appendChild(inputName);
+
+          const inputPrice = document.createElement("input");
+          inputPrice.type = "hidden";
+          inputPrice.name = "price[]";
+          inputPrice.value = item.price;
+          hiddenFields.appendChild(inputPrice);
+        });
+
+        totalPriceElement.textContent = `Total: $${totalPrice}`;
+      } else {
+        // If no cart data is found
+        cartDetailsList.textContent = "Your cart is empty.";
+        totalPriceElement.textContent = "Total: $0";
+      }
+    });
+  </script>
+
+</body>
+</html>
